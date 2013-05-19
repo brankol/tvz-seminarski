@@ -1,0 +1,24 @@
+* { margin: 0; padding: 0; }
+body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; background: #efefef; font-size: 100%; text-align: center; }
+h1 { font-size: 1.88em; letter-spacing: -.05em; display: inline-block; padding-right: 1em; text-shadow: 1px 1px 3px #000; }
+text { font-size: 1em; pointer-events: none; }
+
+.topbar { padding: .5em; background: #a00; color: #fff; border-bottom: 1px solid #fff; }
+    .topbar * { vertical-align: middle; }
+
+.county { fill: #000; transition: fill 400ms ease; }
+    .county:hover { opacity: .8; }
+    .county-hi { fill: #900; }
+    .county-lo { fill: #080; }
+        .county-lo:hover { opacity: .9; }
+    .county-me { fill: #dd0; }
+        .county-me:hover { opacity: .5; }
+/*.county.grad-zagreb { fill: #00adef; }
+.county.zagrebacka { fill: #ffb; }*/
+
+.county-label { fill: #999; font-size: .7em; font-weight: 300; text-anchor: middle; }
+    .county-label-l { font-size: 1em; }
+
+.controls { display: inline-block; width: 18.75em; }
+output { width: 5em; display: inline-block; }
+
