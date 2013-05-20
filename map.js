@@ -37,6 +37,11 @@ d3.json('zupanije_topo.json', function(error, hr) {
         .attr('transform', function(d) { return 'translate(' + path.centroid(d) + ')'; })
         .attr('dy', '.2em')
         .text(function(d) { return d.properties.name; });
+
+    setTimeout(function () {
+        monthEl.onchange();
+        controls.className += ' visible';
+    }, 1500);
 });
 
 
@@ -46,6 +51,7 @@ d3.json('zupanije_topo.json', function(error, hr) {
 var monthEl = document.querySelector('#month');
 var yearEl = document.querySelector('#year');
 var valueEl = document.querySelector('#val');
+var controls = document.querySelector('.controls');
 var months = ['siječanj', 'veljača', 'ožujak', 'travanj', 'svibanj', 'lipanj', 'srpanj', 'kolovoz', 'rujan', 'listopad', 'studeni', 'prosinac'];
 
 monthEl.onchange = function () {
@@ -53,7 +59,7 @@ monthEl.onchange = function () {
     var county;
     var unemploymentRate;
 
-    valueEl.innerHTML = months[parseInt(this.value, 10) - 1];
+    // valueEl.innerHTML = months[parseInt(this.value, 10) - 1];
 
     for (county in unemploymentData) {
         unemploymentRate = (unemploymentData[county][time] / unemploymentData[county]['work-capable'] * 100).toFixed(2);

@@ -19,6 +19,7 @@ text { font-size: 1em; pointer-events: none; }
 .county-label { fill: #999; font-size: .7em; font-weight: 300; text-anchor: middle; }
     .county-label-l { font-size: 1em; }
 
-.controls { display: inline-block; width: 18.75em; }
+.controls { display: inline-block; width: 18.75em; visibility: hidden; }
 output { width: 5em; display: inline-block; }
 
+.visible { visibility: visible; }
